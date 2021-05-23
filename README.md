@@ -28,3 +28,38 @@
 - Commit - Save your files in Git.
 - push - Upload Git commits to remote repo like github.
 - pull - Download changes from remote repo to your local machine, the opposite of push.
+
+## How to Generate SSH Key ?
+
+Using the SSH protocol, you can connect and authenticate to remote servers and services. With SSH keys, you can connect to GitHub without supplying your username and personal access token at each visit.
+
+- Step1 :
+
+  ```bash
+  ssh-keygen -t ed25519 -C "youremail@gmail.com")
+  ```
+
+- Step2 :
+
+  ```
+  > Enter a file in which to save the key (/home/you/.ssh/id_ed25519): [Press enter]
+
+  > Enter passphrase (empty for no passphrase): [Type a passphrase]
+
+  > Enter same passphrase again: [Type passphrase again]
+  ```
+
+- Step3 :Start the ssh-agent in the background.
+
+  ```
+  eval "$(ssh-agent -s)"
+
+  ```
+
+- Step4 : Add your SSH private key to the ssh-agent
+  ```
+  ssh-add ~/.ssh/id_ed25519
+  ```
+- Step5 : Now open <br>
+  home -> .ssh -> .pub
+  - copy the text and paste to the github.
