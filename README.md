@@ -168,3 +168,39 @@ git status
   ```bash
   git push origin master
   ```
+
+# Git Branching
+
+![Branch Merge](statics/git_branch_merge.png)
+
+## Git branch
+
+- No of Branches in our repo.
+- `* `indicates that we are in that branch
+  ```
+    * master
+  ```
+
+## Git checkout - Create a new branch
+
+- `-b` stands for branch
+
+```bash
+git checkout -b first_branch
+```
+
+- after executing we are in that branch.
+
+## Git checkout - switch between branches
+
+- go to master branch
+
+  ```bash
+  git checkout master
+  ```
+
+  OUTPUT:<br>
+  Switched to branch 'master'<br>
+  Your branch is up to date with 'origin/master'.
+
+### In the process of switching branches to write the name of the branch just specify some charecters and press tab it will auto complete the branch name.
