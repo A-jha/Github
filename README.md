@@ -31,7 +31,8 @@
 
 ## How to Generate SSH Key ?
 
-Using the SSH protocol, you can connect and authenticate to remote servers and services. With SSH keys, you can connect to GitHub without supplying your username and personal access token at each visit.
+Using the SSH protocol, you can connect and authenticate to remote servers and services. With SSH keys, you can connect to GitHub without supplying your username and personal access token at each visit.<br>
+`Basically github has a mathematical logic in your private key and based on that key it varifies your public key when you are using it.`
 
 - Step1 :
 
@@ -63,3 +64,28 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
 - Step5 : Now open <br>
   home -> .ssh -> .pub
   - copy the text and paste to the github.
+  - .pub stands for public
+
+## Git Clone
+
+    ```bash
+    git clone <ssh link of your repo>
+    ```
+
+## Git add
+
+- add all files and folder
+  ```bash
+  git add .
+  ```
+- add individual file
+  ```bash
+  git add <filename/filepath>
+  ```
+
+## git commit
+
+- commit with message and description
+  ```bash
+  git commit -m "message" -m "Description"
+  ```
