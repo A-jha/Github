@@ -221,3 +221,27 @@ git checkout -b first_branch
 ## Git merge
 
 - Before merging two branches the general idea is to push the branch and the merge it to master branch.
+- push the code
+
+  ```bash
+  git push origin first_branch
+  ```
+
+- Go to github and create a pull request to merge the branche to master
+- Merge the first_branch to master
+- After merging first branch is not very usefull to us
+- After merging our local devlopment is yet not updated with the merged result to update pull the request
+  ```bash
+  git pull origin master
+  ```
+
+## Delete a branch
+
+```bash
+gith branch -d first_branch
+```
+
+<hr>
+<center>These are basic git commands.<br>
+       &#9824; Avinash Jha &#9824; 
+</center>
