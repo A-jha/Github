@@ -203,4 +203,21 @@ git checkout -b first_branch
   Switched to branch 'master'<br>
   Your branch is up to date with 'origin/master'.
 
-### In the process of switching branches to write the name of the branch just specify some charecters and press tab it will auto complete the branch name.
+### Points To be Noted
+
+- `In the process of switching branches to write the name of the branch just specify some charecters and press tab it will auto complete the branch name.`
+  <br>
+- `The changes made in first_branch will be not shown on switching from first_branch to master branch.`
+
+## Git diff
+
+- This command will show the difference between two branches
+- if we are in first branch
+
+  ```bash
+  git diff master
+  ```
+
+## Git merge
+
+- Before merging two branches the general idea is to push the branch and the merge it to master branch.
