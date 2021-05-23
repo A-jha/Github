@@ -52,13 +52,12 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
 
 - Step3 :Start the ssh-agent in the background.
 
-  ```
+  ```bash
   eval "$(ssh-agent -s)"
-
   ```
 
 - Step4 : Add your SSH private key to the ssh-agent
-  ```
+  ```bash
   ssh-add ~/.ssh/id_ed25519
   ```
 - Step5 : Now open <br>
@@ -66,11 +65,40 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
   - copy the text and paste to the github.
   - .pub stands for public
 
+## Git Status
+
+- it will show us the status of our repo.
+
+```bash
+git status
+```
+
+- status returned<br>
+
+  <kbd>Example - </kbd>
+
+  ````css
+  On branch master
+  Your branch is up to date with 'origin/master'.
+
+      Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+              modified:   README.md
+
+      Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+              modified:   README.md
+      ```
+  ````
+
+# Add repo from github to local
+
 ## Git Clone
 
-    ```bash
-    git clone <ssh link of your repo>
-    ```
+```
+    git clone ssh link of your repo
+```
 
 ## Git add
 
@@ -88,4 +116,55 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
 - commit with message and description
   ```bash
   git commit -m "message" -m "Description"
+  ```
+
+## git push
+
+- origin - An option set for us which basically stands for the location of our repository.
+
+  ```bash
+  git push origin master
+  ```
+
+- We can use upstream
+  ```bash
+  git push -u origin master
+  ```
+- After upstreaming we can push to master using
+  ```bash
+  git push
+  ```
+
+# How to Add local directory into github
+
+- Step1 : Create a repository in your github account
+- step2 :initialize git
+  ```bash
+  git init
+  ```
+- Step3 : Add you directory And files
+  ```bash
+  #to add all
+  git add .
+  # to add selected files
+  git add <file_name>
+  ```
+- Step4 : Commit this with message and desc
+  ```bash
+  git commit -m "Maessage" -m "desc"
+  ```
+
+## Git Remote
+
+- Step5 : Add the remote origin
+  ```bash
+  git remote add origin git@github.com:A-jha/PostgreSql.git
+  ```
+- Step5-1 : Check the remote repo where we connected this repo
+  ```bash
+  git remote -v
+  ```
+- Step6 : Push the repo
+  ```bash
+  git push origin master
   ```
