@@ -242,6 +242,7 @@ gith branch -d first_branch
 ```
 
 <hr>
-<center>These are basic git commands.<br>
+<p align="center">
+  These are basic git commands.<br>
        &#9824; Avinash Jha &#9824; 
-</center>
+</p>
